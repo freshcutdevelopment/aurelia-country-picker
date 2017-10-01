@@ -1,0 +1,19 @@
+<template>
+    <require from="../attributes/ux-selectize"></require>
+    <require from="selectize/dist/css/selectize.default.css"></require>
+    <require from="flag-icon-css/flag-icon.css"></require>
+
+    <label for="options">Select country</label>
+
+    <select id="select-country" if.bind="selected"
+        ux-selectize="httpQuery.bind: getCountries; selected.bind: selected; templateUrl.bind:templateUrl; valueField: code; labelField:name; searchField:name; " 
+        class="demo-default" 
+        placeholder="select country..."
+        change.delegate="countryChanged($event)">
+        <option value.bind="selected.code">${selected.name}</option>
+    </select>
+
+    <hr/>
+
+    <span if.bind="country">selected: <span class="flag-icon flag-icon-${country.toLowerCase()} flag-icon-squared"></span> (${country}) </span>
+</template>

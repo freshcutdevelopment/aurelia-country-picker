@@ -1,0 +1,24 @@
+<template>
+    <require from="style.css"></require>
+    <require from="./resources/elements/country-picker"></require>
+    <div class="container h-100 h">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="jumbotron shadow">
+                    <h1 class="display-3"> <span class="aurelia-purple" ><i class="fa fa-globe" aria-hidden="true"></i> </span> Aurelia country picker</h1>
+                    <p class="lead">An Aurelia custom attribute example using 
+                        <a class="underline" href="https://selectize.github.io/selectize.js/">selectize</a> and <a class="underline" href="https://github.com/lipis/flag-icon-css">flag-icon-css</a>.</p>
+                    <hr class="my-4">
+                    <form>
+                        <div class="form-group">
+                            <country-picker></country-picker>
+                        </div>
+                    </form>
+                    <p class="lead">
+                        <a class="btn btn-outline-primary btn-lg pull-right" href="#" role="button"><i class="fa fa-github" aria-hidden="true"></i> view code</a>
+                    </p>
+            </div>
+           
+        </div>
+    </div>
+
+</template>
